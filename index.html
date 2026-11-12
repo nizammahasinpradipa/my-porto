@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nizam Pradipa | Portfolio</title>
+<meta name="description" content="Portfolio of Nizam Mahasin Pradipa – software engineering student, web developer.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a href="#home" class="logo"><i class="fa-solid fa-code"></i><span>MY<span class="porto">PORTO</span></span></a>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="theme" aria-label="Switch theme"><i class="fa-solid fa-sun sun"></i><i class="fa-solid fa-moon moon"></i></button>
+      <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ══ HOME ══ -->
+  <section id="home" class="hero">
+    <div>
+      <h1>Hi, I'm <span>Nizam Pradipa</span></h1>
+      <p class="role">Web developer and software engineering student</p>
+      <p class="lead">I build clear, responsive websites and apps. Take a look at the projects below, then download my CV or send me a message.</p>
+      <div class="cta">
+        <a class="btn primary" href="#" data-cv><i class="fa-solid fa-download"></i>Download CV</a>
+        <a class="btn" href="#contact"><i class="fa-solid fa-envelope"></i>Contact me</a>
+      </div>
+      <div class="socials">
+        <a class="icon-btn" href="https://github.com/nizammahasinpradipa" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/nizam-pradipa-522565442/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="icon-btn" href="https://www.instagram.com/imdippaa/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <div class="ph photo" id="photo" role="img" aria-label="Profile photo"><span class="ph-hint"><i class="fa-solid fa-user"></i>Profile photo</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="featured" style="margin-top:3.5rem">
+    <div class="sec-head">
+      <div><h2 id="featured">Featured projects</h2><p>Slides on its own · hover to pause · drag to scrub</p></div>
+      <div class="arrows">
+        <button class="icon-btn" id="prev" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="icon-btn" id="next" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="slider" id="slider" aria-label="Featured projects"><div class="track" id="track"></div></div>
+  </section>
+
+  <section class="strip" style="margin-top:3.5rem" aria-label="Skills overview">
+    <ul>
+      <li><i class="fa-brands fa-html5"></i>HTML</li>
+      <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
+      <li><i class="fa-brands fa-js"></i>JavaScript</li>
+      <li><i class="fa-brands fa-php"></i>PHP</li>
+      <li><i class="fa-solid fa-database"></i>MySQL</li>
+      <li><i class="fa-brands fa-git-alt"></i>Git</li>
+    </ul>
+  </section>
+
+  <!-- ══ PROFILE ══ -->
+  <section id="profile" class="sec-divider">
+    <p class="sec-label">Profile<span style="display:none"> section</span></p>
+
+    <div class="p-hero">
+      <div class="photo-wrap">
+        <div class="ph photo" id="photo2" role="img" aria-label="Profile photo of Nizam Mahasin Pradipa"><span class="ph-hint"><i class="fa-solid fa-user"></i>Profile photo</span></div>
+      </div>
+      <div>
+        <h1>Nizam Mahasin Pradipa</h1>
+        <p class="role">Software engineering student and aspiring web developer</p>
+        <p class="lead">I study software engineering at SMK Telkom Malang and I'm comfortable with JavaScript, HTML and CSS. My goal is to become a professional software engineer and web developer who builds applications and websites that are good for people.</p>
+        <div class="cta">
+          <a class="btn primary" href="#" data-cv><i class="fa-solid fa-download"></i>Download CV</a>
+          <a class="btn" href="#home"><i class="fa-solid fa-folder-open"></i>See my projects</a>
+        </div>
+        <ul class="facts">
+          <li><i class="fa-solid fa-school"></i><div><b>SMK Telkom Malang</b><small>School</small></div></li>
+          <li><i class="fa-solid fa-laptop-code"></i><div><b>Software Engineering</b><small>Major</small></div></li>
+          <li><i class="fa-solid fa-graduation-cap"></i><div><b>10th grade</b><small>Current level</small></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cols">
+      <div>
+        <h2>What I'm aiming for</h2>
+        <p>I want to work as a professional software engineer and web developer — building applications and websites that are useful, easy to use, and good for the people who use them.</p>
+        <p>Right now I'm building my foundation with the core web languages.</p>
+        <ul class="tags" style="margin-top:.5rem">
+          <li><i class="fa-brands fa-js"></i>JavaScript</li>
+          <li><i class="fa-brands fa-html5"></i>HTML</li>
+          <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Background</h2>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ SKILLS ══ -->
+  <section id="skills" class="sec-divider">
+    <p class="sec-label">Skills</p>
+    <div class="sec-head" style="margin-bottom:0">
+      <div>
+        <h2>What I work with</h2>
+        <p>My current skill set, honestly rated.</p>
+      </div>
+    </div>
+
+    <div class="skill-groups">
+
+      <div class="skill-group">
+        <h3><i class="fa-solid fa-display" style="margin-right:.5rem;color:var(--accent)"></i>Frontend</h3>
+        <ul class="skill-list">
+          <li class="skill-item">
+            <div class="skill-top"><i class="fa-brands fa-html5"></i><span>HTML</span><small>Basic</small></div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="--w:.6"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-top"><i class="fa-brands fa-css3-alt"></i><span>CSS</span><small>Basic</small></div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="--w:.55"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-top"><i class="fa-brands fa-js"></i><span>JavaScript</span><small>Basic</small></div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="--w:.5"></div></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3><i class="fa-solid fa-code" style="margin-right:.5rem;color:var(--accent)"></i>Programming</h3>
+        <ul class="skill-list">
+          <li class="skill-item">
+            <div class="skill-top"><i class="fa-brands fa-python"></i><span>Python</span><small>Fundamental</small></div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="--w:.4"></div></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3><i class="fa-solid fa-pen-ruler" style="margin-right:.5rem;color:var(--accent)"></i>Design</h3>
+        <ul class="skill-list">
+          <li class="skill-item">
+            <div class="skill-top"><i class="fa-brands fa-figma"></i><span>Figma</span><small>Comfortable</small></div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="--w:.65"></div></div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section id="projects" class="sec-divider">
+    <p class="sec-label">Projects</p>
+    <div class="sec-head" style="margin-bottom:1.5rem">
+      <div>
+        <h2>What I've built</h2>
+        <p>A collection of projects from my studies so far.</p>
+      </div>
+    </div>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn on" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+
+    <div class="gal" id="gallery">
+
+      <article class="proj-card" id="project-calc" data-cat="web">
+        <div class="proj-thumb">
+          <div class="ph" id="proj-img-0" role="img" aria-label="Calculator project screenshot"><span class="ph-hint"><i class="fa-solid fa-image"></i>Project image</span></div>
+          <span class="cat-badge">Web</span>
+        </div>
+        <div class="proj-body">
+          <h3>Calculator</h3>
+          <p>A clean web-based calculator that handles addition, subtraction, multiplication and division — built from scratch with vanilla JavaScript, no libraries.</p>
+          <ul class="tags">
+            <li><i class="fa-brands fa-html5"></i>HTML</li>
+            <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
+            <li><i class="fa-brands fa-js"></i>JavaScript</li>
+          </ul>
+          <div class="proj-links">
+            <a href="http://calculatorjs-blue.vercel.app/" class="demo" target="_blank"><i class="fa-solid fa-play"></i>Live demo</a>
+            <a href="https://github.com/nizammahasinpradipa/calculator.js-dipaa.git" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card" id="project-login" data-cat="web">
+        <div class="proj-thumb">
+          <div class="ph" id="proj-img-1" role="img" aria-label="Login system project screenshot"><span class="ph-hint"><i class="fa-solid fa-image"></i>Project image</span></div>
+          <span class="cat-badge">Web</span>
+        </div>
+        <div class="proj-body">
+          <h3>Login System</h3>
+          <p>A user authentication system with registration, login, and session handling. Passwords are hashed and user data is stored in a MySQL database.</p>
+          <ul class="tags">
+            <li><i class="fa-brands fa-php"></i>PHP</li>
+            <li><i class="fa-solid fa-database"></i>MySQL</li>
+            <li><i class="fa-brands fa-html5"></i>HTML</li>
+          </ul>
+          <div class="proj-links">
+            <a href="https://login-page-bay-nu.vercel.app/" class="demo" target="_blank"><i class="fa-solid fa-play"></i>Live demo</a>
+            <a href="https://github.com/nizammahasinpradipa/login-page.git" target="_blank"><i class="fa-brands fa-github"></i>Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card" id="project-quiz" data-cat="web">
+        <div class="proj-thumb">
+          <div class="ph" id="proj-img-2" role="img" aria-label="Quiz app project screenshot"><span class="ph-hint"><i class="fa-solid fa-image"></i>Project image</span></div>
+          <span class="cat-badge">Web</span>
+        </div>
+        <div class="proj-body">
+          <h3>Quiz App</h3>
+          <p>An interactive quiz that presents multiple-choice questions one by one, tracks the score in real time, and shows a final result screen at the end.</p>
+          <ul class="tags">
+            <li><i class="fa-brands fa-html5"></i>HTML</li>
+            <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
+            <li><i class="fa-brands fa-js"></i>JavaScript</li>
+          </ul>
+          <div class="proj-links">
+            <a href="https://quiz-app-sable-psi-25.vercel.app/" class="demo" target="_blank"><i class="fa-solid fa-play"></i>Live demo</a>
+            <a href="https://github.com/nizammahasinpradipa/quiz-app.git" target="_blank"><i class="fa-brands fa-github"></i>Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card" id="project-portfolio" data-cat="design web">
+        <div class="proj-thumb">
+          <div class="ph" id="proj-img-3" role="img" aria-label="Portfolio website project screenshot"><span class="ph-hint"><i class="fa-solid fa-image"></i>Project image</span></div>
+          <span class="cat-badge">Web · Design</span>
+        </div>
+        <div class="proj-body">
+          <h3>Portfolio Website</h3>
+          <p>This site — a single-page responsive portfolio with a continuous project slider, skills section, dark mode, and smooth scroll navigation.</p>
+          <ul class="tags">
+            <li><i class="fa-brands fa-html5"></i>HTML</li>
+            <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
+            <li><i class="fa-brands fa-js"></i>JavaScript</li>
+            <li><i class="fa-brands fa-figma"></i>Figma</li>
+          </ul>
+          <div class="proj-links">
+            <a href="#" class="demo" data-soon="Portfolio demo"><i class="fa-solid fa-play"></i>Live demo</a>
+            <a href="#" data-soon="Portfolio repo"><i class="fa-brands fa-github"></i>Source</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact" class="sec-divider">
+    <p class="sec-label">Contact</p>
+    <div class="sec-head" style="margin-bottom:0">
+      <div>
+        <h2>Get in touch</h2>
+        <p>Have a question or want to work together? Send me a message.</p>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- left: info -->
+      <div class="contact-info">
+        <a class="contact-card" href="mailto:nizamnizam101010@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          <div><b>Email</b><span>nizamnizam101010@gmail.com</span></div>
+        </a>
+        <div class="contact-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><b>Location</b><span>Malang, East Java, Indonesia</span></div>
+        </div>
+        <div class="contact-card">
+          <i class="fa-solid fa-school"></i>
+          <div><b>School</b><span>SMK Telkom Malang</span></div>
+        </div>
+
+        <div>
+          <p style="font-weight:600;margin:0 0 .75rem">Find me on</p>
+          <div class="social-row">
+            <a class="social-pill" href="https://github.com/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
+            <a class="social-pill" href="https://linkedin.com/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+            <a class="social-pill" href="https://instagram.com/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- right: form -->
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="cf-name">Name <span style="color:var(--accent)">*</span></label>
+            <input id="cf-name" type="text" placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="cf-email">Email <span style="color:var(--accent)">*</span></label>
+            <input id="cf-email" type="email" placeholder="your@email.com" autocomplete="email">
+          </div>
+        </div>
+        <div class="field">
+          <label for="cf-subject">Subject</label>
+          <input id="cf-subject" type="text" placeholder="What's this about?">
+        </div>
+        <div class="field">
+          <label for="cf-msg">Message <span style="color:var(--accent)">*</span></label>
+          <textarea id="cf-msg" placeholder="Write your message here…"></textarea>
+        </div>
+        <div class="form-status" id="formStatus"></div>
+        <button type="submit" class="btn primary" style="align-self:flex-start">
+          <i class="fa-solid fa-paper-plane"></i>Send message
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> Nizam Pradipa. All rights reserved.</span>
+    <a class="btn" href="#home"><i class="fa-solid fa-arrow-up"></i>Back to top</a>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
