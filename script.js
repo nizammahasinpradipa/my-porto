@@ -2,7 +2,6 @@
   var root=document.documentElement,$=function(s){return document.querySelector(s)};
   $('#year').textContent=new Date().getFullYear();
 
-  /* theme */
   try{var t=localStorage.getItem('theme');if(t)root.setAttribute('data-theme',t)}catch(e){}
   $('#theme').addEventListener('click',function(){
     var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
@@ -10,13 +9,11 @@
     try{localStorage.setItem('theme',next)}catch(e){}
   });
 
-  /* mobile menu */
   var nav=$('#nav'),mb=$('#menuBtn');
   function setMenu(o){nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',String(o));mb.setAttribute('aria-label',o?'Close menu':'Open menu')}
   mb.addEventListener('click',function(){setMenu(!nav.classList.contains('open'))});
   nav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
 
-  /* active nav on scroll */
   var sections=document.querySelectorAll('section[id]');
   var navLinks=document.querySelectorAll('nav a');
   function onScroll(){
@@ -30,7 +27,6 @@
   }
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
-  /* toast for unbuilt pages */
   var toast=$('#toast'),tt;
   document.addEventListener('click',function(e){
     var a=e.target.closest('[data-soon]');if(!a)return;
@@ -39,14 +35,12 @@
     toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},2200);
   });
 
-  /* ===== IMAGES – edit paths here in the code ===== */
-  var PROFILE_IMAGE='profile.jpeg';            /* e.g. 'images/me.jpg' */
-  var PROJECT_IMAGES=['calc.png','login.png','quiz.png','porto.png']; /* Calculator, Login System, Quiz App, Portfolio — add paths here */
+  var PROFILE_IMAGE='profile.jpeg';
+  var PROJECT_IMAGES=['calc.png','login.png','quiz.png','porto.png'];
   function setImage(el,src){if(!el||!src)return;el.style.backgroundImage='url("'+src+'")';el.classList.add('filled')}
   setImage($('#photo'),PROFILE_IMAGE);
   setImage($('#photo2'),PROFILE_IMAGE);
 
-  /* ===== CV – put the PDF path here ===== */
   var CV_URL='';
   document.addEventListener('click',function(e){
     var a=e.target.closest('[data-cv]');if(!a)return;e.preventDefault();
@@ -54,7 +48,6 @@
     else{toast.textContent='Add your CV path in CV_URL in the code.';toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},2600)}
   });
 
-  /* ===== BACKGROUND TIMELINE ===== */
   var BACKGROUND=[
     {when:'Now',title:'Software Engineering major, 10th grade',place:'SMK Telkom Malang',text:'Vocational study – learning to build software and websites with JavaScript, HTML and CSS.'},
     {when:'Goal',title:'Professional software engineer and web developer',place:'',text:'Building applications and websites that are good for people.'}
@@ -63,7 +56,6 @@
     return '<li><p class="when">'+b.when+'</p><h3>'+b.title+'</h3>'+(b.place?'<p class="place">'+b.place+'</p>':'')+'<p class="txt">'+b.text+'</p></li>';
   }).join('');
 
-  /* ===== PROJECT CARDS ===== */
   var data=[
     ['Calculator',       [['brands','html5','HTML'],['brands','css3-alt','CSS'],['brands','js','JavaScript']],'A web-based calculator that handles basic arithmetic operations, built with vanilla JavaScript.','calc'],
     ['Login System',     [['brands','php','PHP'],['solid','database','MySQL'],['brands','html5','HTML']],'A user authentication system with register and login pages, built with PHP and a MySQL database.','login'],
@@ -81,7 +73,6 @@
     track.appendChild(c);
   });
 
-  /* continuous slider */
   var x=0,nudge=0,last=0,hover=false,busy=false,
       userPaused=matchMedia('(prefers-reduced-motion:reduce)').matches,SPEED=36;
 
@@ -109,7 +100,7 @@
   slider.addEventListener('pointermove',function(e){
     if(!down)return;var d=e.clientX-px;
     if(!moved&&Math.abs(d)<6)return;
-    if(!moved){moved=true;slider.classList.add('drag');try{slider.setPointerCapture(e.pointerId)}catch(_){}}
+    if(!moved){moved=true;slider.classList.add('drag');try{slider.setPointerCapture(e.pointerId)}catch(_){} }
     x-=d;px=e.clientX;
   });
   function up(){down=false;slider.classList.remove('drag')}
@@ -117,7 +108,6 @@
   slider.addEventListener('click',function(e){if(moved){e.stopPropagation();e.preventDefault();moved=false}},true);
   requestAnimationFrame(function(t){last=t;frame(t)});
 
-  /* animate skill bars when they scroll into view */
   document.querySelectorAll('.skill-bar-fill').forEach(function(bar){
     bar.style.width=(parseFloat(bar.style.getPropertyValue('--w')||0)*100)+'%';
   });
@@ -130,7 +120,6 @@
     document.querySelectorAll('.skill-bar-fill').forEach(function(b){b.classList.add('show')});
   }
 
-  /* contact form */
   var form=$('#contactForm'),status=$('#formStatus');
   form&&form.addEventListener('submit',function(e){
     e.preventDefault();
@@ -143,17 +132,14 @@
     if(!emailOk){
       status.textContent='Please enter a valid email address.';status.classList.add('err');return;
     }
-    /* ── TO CONNECT A REAL BACKEND: replace this block with your Formspree/EmailJS call ── */
     status.textContent='✓ Message sent! I\'ll get back to you soon.';status.classList.add('ok');
     form.reset();
   });
 
-  /* gallery project images */
   for(var gi=0;gi<PROJECT_IMAGES.length;gi++){
     setImage($('#proj-img-'+gi),PROJECT_IMAGES[gi]);
   }
 
-  /* filter buttons */
   var filterBtns=document.querySelectorAll('.filter-btn');
   var projCards=document.querySelectorAll('.proj-card');
   filterBtns.forEach(function(btn){
